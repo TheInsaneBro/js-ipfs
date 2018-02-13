@@ -9,7 +9,7 @@ module.exports = (self) => {
     self.log('stop')
 
     if (self.state.state() !== 'running') {
-      return done(new Error('Not able to stop from state: ' + self.state.state()))
+      return callback(new Error('Not able to stop from state: ' + self.state.state()))
     }
 
     const done = (err) => {
